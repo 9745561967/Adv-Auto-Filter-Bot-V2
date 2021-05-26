@@ -34,6 +34,7 @@ def _onUnMuteRequest(client, cb):
       client.leave_chat(chat_id)
     else:
       client.answer_callback_query(cb.id, text="❗ Warning: Don't click the button if you can speak freely.", show_alert=True)
+      
     
     
 @Client.on_message(filters.text & ~filters.private & ~filters.edited, group=1) 
