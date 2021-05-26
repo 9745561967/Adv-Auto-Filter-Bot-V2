@@ -81,15 +81,15 @@ def _check_member(client, message):
               sql.disapprove(chat_id)
               message.reply_text("❌ **Force Subscribe is Disabled Successfully.**")
             elif input_str.lower() in ('clear'):
-                sent_message = message.reply_text('**Unmuting all members who are muted by me...**')
-                try:
-                  for chat_member in client.get_chat_members(message.chat.id, filter="restricted"):
-                    if chat_member.restricted_by.id == (client.get_me()).id:
+              sent_message = message.reply_text('**Unmuting all members who are muted by me...**')
+              try:
+                for chat_member in client.get_chat_members(message.chat.id, filter="restricted"):
+                  if chat_member.restricted_by.id == (client.get_me()).id:
                       client.unban_chat_member(chat_id, chat_member.user.id)
                       time.sleep(1)
-                 sent_message.edit('✅ **UnMuted all members who are muted by me.**')
-                except ChatAdminRequired:
-                  sent_message.edit('❗ **I am not an admin in this chat.**\n__I can\'t unmute members because i am not an admin in this chat make me admin with ban user permission.__')
+                sent_message.edit('✅ **UnMuted all members who are muted by me.**')
+              except ChatAdminRequired:
+                sent_message.edit('❗ **I am not an admin in this chat.**\n__I can\'t unmute members because i am not an admin in this chat make me admin with ban user permission.__')
             else:
               try:
                 client.get_chat_member(input_str, "me")
