@@ -90,17 +90,17 @@ def _check_member(client, message):
                  sent_message.edit('✅ **UnMuted all members who are muted by me.**')
                 except ChatAdminRequired:
                   sent_message.edit('❗ **I am not an admin in this chat.**\n__I can\'t unmute members because i am not an admin in this chat make me admin with ban user permission.__')
-              else:
-                try:
-                  client.get_chat_member(input_str, "me")
-                  sql.add_channel(chat_id, input_str)
-                  message.reply_text(f"✅ **Force Subscribe is Enabled**\n__Force Subscribe is enabled, all the group members have to subscribe this [channel](https://t.me/{input_str}) in order to send messages in this group.__", disable_web_page_preview=True)
-                except UserNotParticipant:
-                   message.reply_text(f"❗ **Not an Admin in the Channel**\n__I am not an admin in the [channel](https://t.me/{input_str}). Add me as a admin in order to enable ForceSubscribe.__", disable_web_page_preview=True)
-                except (UsernameNotOccupied, PeerIdInvalid):
-                  message.reply_text(f"❗ **Invalid Channel Username.**")
-                except Exception as err:
-                  message.reply_text(f"❗ **ERROR:** ```{err}```")
+            else:
+              try:
+                client.get_chat_member(input_str, "me")
+                sql.add_channel(chat_id, input_str)
+                message.reply_text(f"✅ **Force Subscribe is Enabled**\n__Force Subscribe is enabled, all the group members have to subscribe this [channel](https://t.me/{input_str}) in order to send messages in this group.__", disable_web_page_preview=True)
+              except UserNotParticipant:
+                message.reply_text(f"❗ **Not an Admin in the Channel**\n__I am not an admin in the [channel](https://t.me/{input_str}). Add me as a admin in order to enable ForceSubscribe.__", disable_web_page_preview=True)
+              except (UsernameNotOccupied, PeerIdInvalid):
+                message.reply_text(f"❗ **Invalid Channel Username.**")
+              except Exception as err:
+                message.reply_text(f"❗ **ERROR:** ```{err}```")
             else:
               if sql.fs_settings(chat_id):
                 message.reply_text(f"✅ **Force Subscribe is enabled in this chat.**\n__For this [Channel](https://t.me/{sql.fs_settings(chat_id).channel})__", disable_web_page_preview=True)
