@@ -80,7 +80,7 @@ def _check_member(client, message):
             if input_str.lower() in ("off", "no", "disable"):
               sql.disapprove(chat_id)
               message.reply_text("❌ **Force Subscribe is Disabled Successfully.**")
-              elif input_str.lower() in ('clear'):
+            elif input_str.lower() in ('clear'):
                 sent_message = message.reply_text('**Unmuting all members who are muted by me...**')
                 try:
                   for chat_member in client.get_chat_members(message.chat.id, filter="restricted"):
