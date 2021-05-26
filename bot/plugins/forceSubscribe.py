@@ -32,7 +32,7 @@ def _onUnMuteRequest(client, cb):
     if not client.get_chat_member(chat_id, (client.get_me()).id).status == 'administrator':
       client.send_message(chat_id, f"❗ **{cb.from_user.mention} is trying to UnMute himself but i can't unmute him because i am not an admin in this chat add me as admin again.**\n__#Leaving this chat...__")
       client.leave_chat(chat_id)
-   else:
+  else:
     client.answer_callback_query(cb.id, text="❗ Warning: Don't click the button if you can speak freely.", show_alert=True)
     
     
