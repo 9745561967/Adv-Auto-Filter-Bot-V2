@@ -24,7 +24,7 @@ def _onUnMuteRequest(client, cb):
           client.unban_chat_member(chat_id, user_id)
           if cb.message.reply_to_message.from_user.id == user_id:
             cb.message.delete()
-            except UserNotParticipant:
+        except UserNotParticipant:
               client.answer_callback_query(cb.id, text="❗ Join the mentioned 'channel' and press the 'UnMute Me' button again.", show_alert=True)
     else:
       client.answer_callback_query(cb.id, text="❗ You are muted by admins for other reasons.", show_alert=True)
