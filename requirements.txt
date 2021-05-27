@@ -4,3 +4,8 @@ Pyrogram
 Pymongo
 Requests 
 TgCrypto
+pyrogram
+requests
+tgcrypto
+youtube-dl
+olefile
