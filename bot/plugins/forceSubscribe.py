@@ -50,7 +50,7 @@ def _check_member(client, message):
       except UserNotParticipant:
         try:
           buttons = [[
-              InlineKeyboardButton('Join Channel', url=f"https://t.me/{channel}")
+              InlineKeyboardButton('Join Channel', url=f"https://t.me/Allmovies_official")
           ],[
               InlineKeyboardButton('Unmute Me', callback_data='onUnMuteRequest')
           ]]
