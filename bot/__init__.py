@@ -19,7 +19,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 DB_URI = os.environ.get("DB_URI")
 
-SUDO_USERS = os.environ.get("SUDO_USERS") 
+SUDO_USERS = list(set(int(x) for x in os.environ.get("SUDO_USERS")
 
 UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL") 
 
