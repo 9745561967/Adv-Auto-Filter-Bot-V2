@@ -15,6 +15,8 @@ APP_ID = int(os.environ.get("APP_ID"))
 
 API_HASH = os.environ.get("API_HASH")
 
+AUTH_USERS = os.environ.get("AUTH_USERS") 
+
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 DB_URI = os.environ.get("DB_URI")
