@@ -1644,7 +1644,7 @@ async def callback_data(bot, update: CallbackQuery):
         ],[
             InlineKeyboardButton('Support 🛠', url='https://t.me/AM_Chats')
         ],[
-            InlineKeyboardButton('Help ⚙', callback_data="help")
+            InlineKeyboardButton('🗣️Request', url='https://t.me/AM_Chats')
             InlineKeyboardButton('𝚄𝚙𝚍𝚊𝚝𝚎𝚜🤖', url='https://t.me/AM_Links')
         ],[
             InlineKeyboardButton('✅ Join Main Channel ✅', url='https://t.me/Allmovies_Official')
