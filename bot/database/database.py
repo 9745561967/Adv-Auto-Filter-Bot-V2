@@ -4,16 +4,7 @@ from bot import DB_URI
 
 DB_NAME = os.environ.get("DB_NAME", "Adv_Auto_Filter_Bot_V2")
     
-class Database:
-
-    def __call__(cls, *args, **kwargs):
-        if cls not in cls.__instances__:
-            cls.__instances__[cls] = super(Singleton, cls).__call__(*args, **kwargs)
-
-        return cls.__instances__[cls]
-
-
-class Database(metaclass=Singleton):
+class Database: 
 
     def __init__(self):
         self._client = motor.motor_asyncio.AsyncIOMotorClient(DB_URI)
