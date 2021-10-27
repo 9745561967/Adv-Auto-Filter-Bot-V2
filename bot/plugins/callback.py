@@ -1645,6 +1645,7 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
         ],[
             InlineKeyboardButton('Help ⚙', callback_data="help")
+            InlineKeyboardButton('𝚄𝚙𝚍𝚊𝚝𝚎𝚜🤖', url='https://t.me/AM_Links')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1663,7 +1664,6 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('About 🚩', callback_data='about')
         ],[
             InlineKeyboardButton('Close 🔐', callback_data='close')
-            InlineKeyboardButton('𝚄𝚙𝚍𝚊𝚝𝚎𝚜🤖', url='https://t.me/AM_Links')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
