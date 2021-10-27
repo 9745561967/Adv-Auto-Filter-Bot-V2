@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) @AlbertEinsteinTG
+# (c) @AlbertEinsteinTG & MRK_YT
 
 import os
 import logging
@@ -10,18 +10,25 @@ from logging.handlers import RotatingFileHandler
 
 from .translation import Translation
 
+ Created https://github.com/MRK-YT 
+UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL")
+
+MT_CHANNEL_USERNAME = os.environ.get("JOIN_MAIN_CHANNEL")
+
+MRK_YT_MASTER = os.environ.get("BOT_MASTER")
+
+MT_GROUP = os.environ.get("G_ID_START")
+
+MT_CHANNEL = os.environ.get("C_ID_START")
+
 # Change Accordingly While Deploying To A VPS
-APP_ID = int(os.environ.get("APP_ID")) 
+APP_ID = int(os.environ.get("APP_ID"))
 
 API_HASH = os.environ.get("API_HASH")
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 DB_URI = os.environ.get("DB_URI")
-
-SUDO_USERS = os.environ.get("SUDO_USERS")
-
-UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL") 
 
 USER_SESSION = os.environ.get("USER_SESSION")
 
@@ -43,6 +50,7 @@ logging.basicConfig(
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 start_uptime = time.time()
+
 
 
 def LOGGER(name: str) -> logging.Logger:
