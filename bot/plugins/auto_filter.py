@@ -8,7 +8,7 @@ from pyrogram.errors import ButtonDataInvalid, FloodWait
 
 from bot.database import Database # pylint: disable=import-error
 from bot.bot import Bot # pylint: disable=import-error
-
+from bot import MT_CHANNEL_USERNAME, MASSAGE_PHOTO
 
 FIND = {}
 INVITE_LINK = {}
@@ -60,6 +60,11 @@ async def auto_filter(bot, update):
     filters = await db.get_filters(group_id, query)
     
     if filters:
+        results.append(
+                [
+                    InlineKeyboardButton("💢 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 💢", url=f"https://t.me/{MT_CHANNEL_USERNAME}")
+                ]
+            )
         for filter in filters: # iterating through each files
             file_name = filter.get("file_name")
             file_type = filter.get("file_type")
@@ -285,4 +290,3 @@ async def recacher(group_id, ReCacheInvite=True, ReCacheActive=False, bot=Bot, u
             
             ACTIVE_CHATS[str(group_id)] = achatId
     return 
-
