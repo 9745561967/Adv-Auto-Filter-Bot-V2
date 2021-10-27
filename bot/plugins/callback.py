@@ -1646,6 +1646,8 @@ async def callback_data(bot, update: CallbackQuery):
         ],[
             InlineKeyboardButton('Help ⚙', callback_data="help")
             InlineKeyboardButton('𝚄𝚙𝚍𝚊𝚝𝚎𝚜🤖', url='https://t.me/AM_Links')
+        ],[
+            InlineKeyboardButton('🖥️ 𝚃𝚞𝚝𝚘𝚛𝚒𝚊𝚕 𝚅𝚒𝚍𝚎𝚘 🖥️', url='https://youtu.be/OTqZmADyOjU')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1678,6 +1680,11 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "about": 
         buttons = [[
+            InlineKeyboardButton('👤 Admin', url='https://Muhdaslamp'),
+            InlineKeyboardButton('Admin👤', url='https://t.me/Dulquer_jin')
+        ],[
+            InlineKeyboardButton('👤 Ownwer 👤', url='https://t.me/mhdriyaskt')
+        ],[
             InlineKeyboardButton('Home ⚡', callback_data='start'),
             InlineKeyboardButton('Close 🔐', callback_data='close')
         ]]
@@ -1708,4 +1715,3 @@ def time_formatter(seconds: float) -> str:
         ((str(minutes) + "m, ") if minutes else "") + \
         ((str(seconds) + "s") if seconds else "")
     return tmp
-
