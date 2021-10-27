@@ -1642,7 +1642,7 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/mhdriyaskt'),
             InlineKeyboardButton('Source Code 🧾', url ='https://t.me/mhdriyaskt')
         ],[
-            InlineKeyboardButton('Support 🛠', url='https://t.me/AM_Chats')
+            InlineKeyboardButton('⚙️𝙷𝚎𝚕𝚙⚙️', callback_data="help")
         ],[
             InlineKeyboardButton('🗣️Request', url='https://t.me/AM_Chats')
             InlineKeyboardButton('𝚄𝚙𝚍𝚊𝚝𝚎𝚜🤖', url='https://t.me/AM_Links')
