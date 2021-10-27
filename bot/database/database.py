@@ -1,8 +1,10 @@
+import os
 import motor.motor_asyncio # pylint: disable=import-error
 from bot import DB_URI
 
-class Singleton(type):
-    __instances__ = {}
+DB_NAME = os.environ.get("DB_NAME", "Adv_Auto_Filter_Bot_V2")
+    
+class Database:
 
     def __call__(cls, *args, **kwargs):
         if cls not in cls.__instances__:
