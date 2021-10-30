@@ -11,7 +11,7 @@ from bot import UPDATE_CHANNEL # Update Text Message Channel Update
 from bot import MRK_YT_MASTER
 from bot import MT_GROUP
 from bot import MT_CHANNEL # Main Channel Added
-from bot.motech import AM_Links
+from bot.motech import MT_BOT_UPDATES 
 
 db = Database()
 
@@ -62,13 +62,13 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔔Join Main Channel🔔', url=f"{AM_NewRelease}"
+                                    '🔔Join Main Channel🔔', url=f"{MT_CHANNEL}"
                                 )
                         ],
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔊 Bot Updates 🔊', url=f"{AM_Links}"
+                                    '🔊 Bot Updates 🔊', url=f"{MT_BOT_UPDATES}"
                                 )
                         ]
                     ]
@@ -119,11 +119,11 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('👨‍💼Creater', url=f'https://t.me/{mhdriyaskt}'),
+        InlineKeyboardButton('👨‍💼Creater', url=f'https://t.me/{MRK_YT_MASTER}'),
         InlineKeyboardButton('Help 🤔', callback_data="help")
     ],[
-        InlineKeyboardButton('🗣️Group', url=f'{Am_Chats}'),
-        InlineKeyboardButton('Channel🔊', url=f'{AM_links}')
+        InlineKeyboardButton('🗣️Group', url=f'{MT_GROUP}'),
+        InlineKeyboardButton('Channel🔊', url=f'{MT_CHANNEL}')
     ],[
         InlineKeyboardButton('✅ Join Main Channel ✅', url='https://t.me/Allmovies_Official')
     ]]
